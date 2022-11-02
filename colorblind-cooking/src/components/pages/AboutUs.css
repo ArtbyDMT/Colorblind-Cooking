@@ -1,0 +1,13 @@
+
+
+.imagefacts {
+    height: 150px;
+    width : 500px;
+}
+
+
+.aboutusbuttons{
+    display: flex;
+    justify-content: center;
+
+}

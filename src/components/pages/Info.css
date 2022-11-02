@@ -1,0 +1,14 @@
+
+
+
+.imagefacts {
+    height: 150px;
+    width : 500px;
+}
+
+
+.infobuttons{
+    display: flex;
+    justify-content: center;
+
+}
