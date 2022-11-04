@@ -1,3 +1,14 @@
+:root {
+  
+}
+.grill {
+  height: 100%;
+  width:100%;
+  font-family: 'Karma', serif;
+  color: #f6f6f6;
+  letter-spacing: 0.1em;
+}
+
 h3 {
     text-transform: uppercase;
     text-align: center;
@@ -72,7 +83,7 @@ h3 {
     z-index: 0;
   }
   .firetimer a:after {
-    color: white;
+    color: rgb(255, 0, 0);
     position: relative;
     font-size: 20px;
   }
@@ -92,11 +103,7 @@ h3 {
     display: block;
     width: 200px;
     height: 250px;
-    background: white;
-    border-top-left-radius: 50% 60%;
-    border-top-right-radius: 50% 60%;
-    border-bottom-left-radius: 50% 40%;
-    border-bottom-right-radius: 50% 40%;
+    background-image: url("../logo/burgerpatty.png");
     position: relative;
     cursor: pointer;
   }
@@ -109,32 +116,4 @@ h3 {
     background: var(--yellow1);
     top: 40%;
     left: 22%;
-  }
-  .food.soft {
-    background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.6) 10%, white 90%);
-  }
-  .food.medium-soft {
-    background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.8) 5%, white 95%);
-  }
-  .food.medium-soft::after {
-    background: radial-gradient(circle closest-side,
-        var(--yellow2) 10%, var(--yellow1) 90%);
-  }
-  .food.medium-hard::after {
-    background: radial-gradient(circle closest-side,
-        var(--yellow1) 10%, var(--yellow2) 90%);
-  }
-  .egg.hard::after {
-    background: var(--yellow2);
-  }
-  .egg::before {
-    box-shadow: var(--bs);
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    content: '';
-    position: absolute;
-    z-index: -1;
-  }
-  .egg:hover::before {
-    opacity: 1;
   }

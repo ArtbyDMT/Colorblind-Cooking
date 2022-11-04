@@ -1,6 +1,7 @@
 import React from "react"
 import Meat from "./Meat"
 import './FireTimer.css'
+import FireButton from "../buttons/FireButton";
 
 
         class FireTimer extends React.Component {
@@ -47,6 +48,7 @@ import './FireTimer.css'
               const {lapse, running} = this.state;
               const displayTime = this.formatSeconds(lapse);
               const playPauseClass = running ? 'pause' : 'start'
+              
               return (
                 <section>
                   <div className="grill">
@@ -54,14 +56,20 @@ import './FireTimer.css'
                     <h1>Your Grilling, Your Way!</h1>
                     <div className="firetimer">
                       <label>{displayTime}</label>
-                      <a href="" className={playPauseClass} 
-                        onClick={this.handleRunClick}></a>
+                      <FireButton 
+                      href=""
+                      className={playPauseClass} 
+                      onClick={this.handleRunClick}
+                      text="▶"/>
+                     
+                      {/* <a href="" className={playPauseClass} 
+                        onClick={this.handleRunClick}></a> */}
                     </div>
-                    <Meat type="Rare" title="rare: Cool, red center" instructions="3 minutes" seconds="180" updateTimer={this.updateTimer} />
-                    <Meat type="Medium Rare" title="medium-rare: warm, red center" instructions="4 minutes" seconds="240" updateTimer={this.updateTimer} />
-                    <Meat type="Medium" title="medium: warm, pink center" instructions="5 minutes" seconds="300" updateTimer={this.updateTimer} />
-                    <Meat type="Medium Well" title="medium-well: warm, very little pink center" instructions="6 minutes" seconds="360" updateTimer={this.updateTimer} />
-                    <Meat type="Well Done" title="well-done: warm, no pink center" instructions="7 minutes" seconds="420" updateTimer={this.updateTimer} />
+                    <Meat type="Rare" title="rare: Cool, red center" instructions="3 minutes" seconds="180" updateTimer={this.updateTimer} href="/timerspage" />
+                    <Meat type="Medium Rare" title="medium-rare: warm, red center" instructions="4 minutes" seconds="240" updateTimer={this.updateTimer} href="/timerspage"/>
+                    <Meat type="Medium" title="medium: warm, pink center" instructions="5 minutes" seconds="300" updateTimer={this.updateTimer} href="/timerspage"/>
+                    <Meat type="Medium Well" title="medium-well: warm, very little pink center" instructions="6 minutes" seconds="360" updateTimer={this.updateTimer} href="/timerspage"/>
+                    <Meat type="Well Done" title="well-done: warm, no pink center" instructions="7 minutes" seconds="420" updateTimer={this.updateTimer} href="/timerspage"/>
                   </div>
                 </section>
               )

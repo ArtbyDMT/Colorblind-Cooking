@@ -5,7 +5,8 @@ import FireTimer from '../firetimer/FireTimer';
 export default function Burger(){
     return(
         <div>
-            <FireTimer />
+            <FireTimer 
+            />
         </div>
     )
 
