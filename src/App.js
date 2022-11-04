@@ -8,7 +8,7 @@ import SteakOrBurger from './components/pages/SteakOrBurger';
 import Steak from './components/pages/Steak';
 import Burger from './components/pages/Burger';
 import Finished from './components/pages/Finished';
-import FireTimer from './components/firetimer/FireTimer';
+import TimersPage from './components/pages/TimersPage';
 
 
 export default function App() {
@@ -24,7 +24,7 @@ export default function App() {
           <Route path="/steakorburger" element={<SteakOrBurger />} />
           <Route path="/steak" element={<Steak />} /> 
           <Route path="/burger" element={<Burger />} /> 
-          <Route path="/timerspage" element={<FireTimer />} /> 
+          <Route path="/timerspage" element={<TimersPage />} /> 
           <Route path="/finished" element={<Finished />} /> 
       </Routes>
       <br />
