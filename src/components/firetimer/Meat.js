@@ -5,7 +5,7 @@ const Meat = (props) => {
     const cookingClasses = `food ${type}`
     return (
       <div className="food-container" onClick={() => updateTimer(seconds, type)}>
-        <span className={cookingClasses}></span>
+        <img className={cookingClasses} src={props.image}/>
         <h3>{title}</h3>
         <p>{instructions}</p>
       </div>
