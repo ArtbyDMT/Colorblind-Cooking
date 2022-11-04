@@ -18,8 +18,7 @@ export default function Info() {
                     <li>Color blindness is hereditary, however, it can also be caused by eye diseases, aging or retina damage</li>
                     <li>People who suffer from red green color blindness have a difficult time determining if their meat is cooked enough. Without being able to see different shades of red, it is hard to tell.</li>
                 </ul>
-            </div>
-            <div className="infobuttons">
+                <div className="infobuttons">
                 <div className="factsbuttons">
                     <h3 className="h3">Learn More!</h3>
                     <div className="factsfirebutton">
@@ -49,6 +48,8 @@ export default function Info() {
                     />
                 </div>
             </div>
+            </div>
+           
         </div>
     )
 }
