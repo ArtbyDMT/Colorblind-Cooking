@@ -103,7 +103,6 @@ h3 {
     display: block;
     width: 200px;
     height: 250px;
-    background-image: url("../logo/burgerpatty.png");
     position: relative;
     cursor: pointer;
   }
