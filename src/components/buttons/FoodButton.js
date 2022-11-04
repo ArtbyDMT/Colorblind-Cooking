@@ -5,7 +5,7 @@ export default function FoodButton(props){
 return(
    
         <div className="foodbutton">
-            <button type={props.type} className="actualfoodbutton" onClick={props.onClick} aria-current="page">
+            <button type={props.type} className={props.className} onClick={props.onClick} aria-current="page">
             <img src={props.img} alt={props.name} />
                <a href={props.href}>{props.text}</a>
             </button>
