@@ -7,13 +7,15 @@ export default function SteakOrBurger(){
     return(
         <div className="SteakOrBurger-container">
             
-            <FoodButton className="steak"
+            <FoodButton 
+                className="steak"
                 type="submit"
                 href="/steak"
                 img={steak}
             />   
          
-            <FoodButton className="burger"
+            <FoodButton 
+               className="burger"
                type="submit"
                href="/burger"
                img={burger}
