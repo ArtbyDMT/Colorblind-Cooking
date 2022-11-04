@@ -1,8 +1,7 @@
-.Burger{
-    margin-left: 250px;
+
+
+.SteakOrBurger-container{
     display: flex;
-    justify-content:align-items;
-    align-items:center;
-    height: 200px;
-    width: 200px;
+    align-items: center;
+    flex-direction: row;
 }
