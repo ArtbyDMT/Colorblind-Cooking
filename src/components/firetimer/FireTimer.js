@@ -57,7 +57,7 @@ import FireButton from "../buttons/FireButton";
                     <div className="firetimer">
                       <label>{displayTime}</label>
                       <FireButton 
-                      href=""
+                      href="/timerspage"
                       className={playPauseClass} 
                       onClick={this.handleRunClick}
                       text="▶"/>
