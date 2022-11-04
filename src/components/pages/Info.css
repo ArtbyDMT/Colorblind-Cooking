@@ -5,6 +5,12 @@
     
 }
 
+.container-aboutus{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
 
 .imagefacts {
     height: 150px;
@@ -16,4 +22,5 @@
     display: flex;
     justify-content: center;
 
+    align-items: center;
 }
