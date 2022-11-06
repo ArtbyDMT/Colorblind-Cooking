@@ -50,10 +50,12 @@ import FireButton from "../buttons/FireButton";
               const playPauseClass = running ? 'pause' : 'start'
               
               return (
+                
                 <section>
+                  
                   <div className="grill">
-                    
                     <h1>Your Grilling, Your Way!</h1>
+                    
                     <div className="firetimer">
                       <label>{displayTime}</label>
                       <FireButton 
@@ -62,8 +64,7 @@ import FireButton from "../buttons/FireButton";
                       onClick={this.handleRunClick}
                       text="▶"/>
                      
-                      {/* <a href="" className={playPauseClass} 
-                        onClick={this.handleRunClick}></a> */}
+                    
                     </div>
                     <Meat type="Rare" title="rare: Cool, red center" instructions="3 minutes" seconds="180" updateTimer={this.updateTimer} image={this.props.image} />
                     <Meat type="Medium Rare" title="medium-rare: warm, red center" instructions="4 minutes" seconds="240" updateTimer={this.updateTimer} image={this.props.image} />
