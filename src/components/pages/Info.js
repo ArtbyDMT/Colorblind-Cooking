@@ -8,7 +8,10 @@ import colorblindfacts from '../logo/colorblindfacts.png';
 export default function Info() {
     return (
         <div className="container-aboutus">
-            <div className="img-and-ul">
+                <div className="img-and-ul">
+                <br />
+                <br />
+                <br />
                 <br />
                 <img src={colorblindfacts} className="imagefacts" alt="colorblind"/>
 
@@ -21,6 +24,8 @@ export default function Info() {
                 <div className="infobuttons">
                 <div className="factsbuttons">
                     <h3 className="h3">Learn More!</h3>
+                    <br />
+                    
                     <div className="factsfirebutton">
                         <FireButton
                             type="submit"
@@ -30,6 +35,7 @@ export default function Info() {
                     </div>
                     <br />
                     <br />
+                    
                     <div className="morefactsfirebutton">
                         <FireButton
                             type="submit"
@@ -37,19 +43,19 @@ export default function Info() {
                             text="More Facts!"
                         />
                     </div>
-                </div>
+                    <br />
                 <br />
-                <br />
-                <div className="contactusfirebutton">
+                    <div className="contactusfirebutton">
                     <FireButton
                         type="submit"
                         href="mailto: johnnywaffles1@hotmail.com"
                         text="Contact Us"
                     />
                 </div>
-            </div>
-            </div>
-           
-        </div>
+                </div>
+               
+               </div>
+                </div>
+                </div>
     )
 }
