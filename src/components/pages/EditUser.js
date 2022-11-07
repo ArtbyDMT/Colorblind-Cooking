@@ -8,20 +8,6 @@ import "./EditUser.css";
 export default function EditUser() {
   let navigate = useNavigate();
 
-  const { id } = useParams();
-
-  const [user, setUser] = useState({
-    email: "",
-    firstName: "",
-    lastName: "",
-    password: "",
-  });
-
-  useEffect(() => {
-    loadUser();
-  }, []);
-
-
   const onSubmit = async function(e) {
     e.preventDefault();
     const formData = new FormData(e.target.closest("form"));
@@ -32,14 +18,11 @@ export default function EditUser() {
     navigate("/");
   };
 
-  const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8080/editUserInfo/`);
-    setUser(result.data);
-  };
-
   const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:8080/deleteByEmail/`);
-    loadUser();
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    await axios.delete(`http://localhost:8080/deleteByEmail/${loggedInUser}`, )
+    localStorage.clear();
+    navigate("/");
   };
 
   return (
