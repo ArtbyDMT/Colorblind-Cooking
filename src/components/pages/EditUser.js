@@ -18,11 +18,19 @@ export default function EditUser() {
     navigate("/");
   };
 
-  const deleteUser = async (id) => {
+  const deleteUser = async (event) => {
+    event.preventDefault();
+    console.log('delete');
+    try {
     const loggedInUser = localStorage.getItem('loggedInUser');
     await axios.delete(`http://localhost:8080/deleteByEmail/${loggedInUser}`, )
-    localStorage.clear();
-    navigate("/");
+    } catch (e) {
+        console.error(e.message);
+    } finally {
+        localStorage.clear();
+        navigate("/");
+    }
+    
   };
 
   return (
@@ -77,8 +85,8 @@ export default function EditUser() {
                                         <FireButton
                                             onClick={deleteUser}
                                             type="submit"
-                                            href="/"
                                             text="Delete"
+                                            href="/"
                                         />
                                     </div>
                                     </div>
