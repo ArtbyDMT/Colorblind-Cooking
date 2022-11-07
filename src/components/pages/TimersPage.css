@@ -2,6 +2,7 @@
     background-image: url(../logo/firegrill5.png);
     height: 100vh; 
     width: 100vw;
+    background-attachment: fixed;
 
     /* Center and scale the image nicely */
     background-position: center;

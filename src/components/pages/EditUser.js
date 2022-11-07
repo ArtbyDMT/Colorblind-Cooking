@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import FireButton from "../buttons/FireButton";
+import flameonly from '../logo/flameonly.gif';
+import "./EditUser.css";
 
 export default function EditUser() {
   let navigate = useNavigate();
@@ -14,104 +17,95 @@ export default function EditUser() {
     password: "",
   });
 
-  const { email, firstname, lastName, password } = user;
-
-  const onInputChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
-
   useEffect(() => {
     loadUser();
   }, []);
 
-  const onSubmit = async (e) => {
+
+  const onSubmit = async function(e) {
     e.preventDefault();
-    await axios.post(`http://localhost:8080/editUserInfo/${id}`, user);
+    const formData = new FormData(e.target.closest("form"));
+    const user = Object.fromEntries(formData);
+    console.log(user);
+
+    await axios.post(`http://localhost:8080/editUserInfo/`, user);
     navigate("/");
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8080/editUserInfo/${id}`);
+    const result = await axios.get(`http://localhost:8080/editUserInfo/`);
     setUser(result.data);
   };
 
   const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:8080/deleteByEmail/${id}`);
+    await axios.delete(`http://localhost:8080/deleteByEmail/`);
     loadUser();
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">Edit Info</h2>
+    <div className="formpage">
+            <img src={flameonly} className="giffirelogo" alt=""/>
 
-          <form onSubmit={(e) => onSubmit(e)}>
-            <div className="mb-3">
-              <label htmlFor="First Name" className="form-label">
-                First Name
-              </label>
-              <input
-                type={"text"}
-                className="form-control"
-                placeholder="Enter your first name"
-                name="firstname"
-                value={user.firstName}
-                onChange={(e) => onInputChange(e)}
-              />
+
+            <div class="form-body">
+                <div class="">
+                    <div class="form-holder">
+                        <div class="form-content">
+                            <div class="form-items">
+                                <h3 className="text-center m-4">Edit User</h3>
+                                <form class="requires-validation" onSubmit={onSubmit}>
+
+                                    <div className="col-md-12">
+                                        <label for="inputFirstName" className="form-label">First Name</label>
+                                        <input name="firstName" type="text" className="form-control" id="inputFirstName" />
+                                    </div>
+                                    <div className="col-md-12">
+                                        <label for="inputLastName" className="form-label">Last Name</label>
+                                        <input name="lastName"  type="text" className="form-control" id="inputLastName" />
+                                    </div>
+                                    <div className="col-md-12">
+                                        <label for="inputEmail4" className="form-label">Email</label>
+                                        <input name="email" type="email" className="form-control" id="inputEmail4" />
+                                    </div>
+                                    <div className="col-md-12">
+                                        <label for="inputPassword4" className="form-label">Password</label>
+                                        <input name="password" type="password" className="form-control" id="inputPassword4" />
+                                    </div>
+
+                                    <br />
+                                    <div className="editbuttons">
+
+                                    <div className="editfirebuttonform">
+                                        <FireButton
+                                            onClick={onSubmit}
+                                            type="submit"
+                                            text="Submit"
+                                        />
+                                    </div><br />
+                                    
+                                    <div className="cancelfirebuttonform">
+                                        <FireButton
+                                            type="submit"
+                                            href="/"
+                                            text="Cancel"
+                                        />
+                                    </div><br />
+                                    <div className="deletefirebuttonform">
+                                        <FireButton
+                                            onClick={deleteUser}
+                                            type="submit"
+                                            href="/"
+                                            text="Delete"
+                                        />
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="mb-3">
-              <label htmlFor="Last Name" className="form-label">
-                Last Name
-              </label>
-              <input
-                type={"text"}
-                className="form-control"
-                placeholder="Enter your last name"
-                name="lastname"
-                value={user.lastName}
-                onChange={(e) => onInputChange(e)}
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="Email" className="form-label">
-                Email
-              </label>
-              <input
-                type={"text"}
-                className="form-control"
-                placeholder="Enter your email"
-                name="email"
-                value={user.email}
-                onChange={(e) => onInputChange(e)}
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="Password" className="form-label">
-                Password
-              </label>
-              <input
-                type={"password"}
-                className="form-control"
-                placeholder="Enter your password"
-                name="password"
-                value={user.password}
-                onChange={(e) => onInputChange(e)}
-              />
-            </div>
-            <button type="submit" className="btn btn-outline-primary">
-              Submit
-            </button>
-            <Link className="btn btn-outline-danger mx-2" to="/">
-              Cancel
-            </Link>
-            <Link className="btn btn-danger mx-2" 
-                    onClick={() => deleteUser(user.email)} to="/">
-                Delete
-            </Link>
-          </form>
         </div>
-      </div>
-    </div>
   );
 }
+

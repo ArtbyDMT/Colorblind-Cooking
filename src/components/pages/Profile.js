@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { useEffect,useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import "./Profile";
+import FireButton from "../buttons/FireButton";
+
 
 export default function Profile() {
   const [user, setUser] = useState({
@@ -22,10 +25,12 @@ export default function Profile() {
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">User Details</h2>
+    <div class="form-body">
+                <div class="">
+                    <div class="form-holder">
+                        <div class="form-content">
+                            <div class="form-items">
+                                <h3 className="text-center m-4">Profile</h3>
 
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
@@ -42,14 +47,28 @@ export default function Profile() {
                 </li>
               </ul>
             </div>
+            
           </div>
-          <Link className="btn btn-primary my-2 toedituser" to={"/edituser"}>
-            Edit User
-            </Link>
-            <br />
-          <Link className="btn btn-primary my-2" to={"/"}>
-            Back to Home
-          </Link>
+          <div className="buttons">
+          <div className="editfirebuttonform">
+                                        <FireButton
+                                            type="submit"
+                                            href="/edituser"
+                                            text="Edit"
+                                        />
+                                    </div>
+                                    <div className="homefirebuttonform">
+                                        <FireButton
+                                            type="submit"
+                                            href="/"
+                                            text="Home"
+                                        />
+                                    </div>
+                                    </div>
+          </div>
+          </div>
+          
+          
         </div>
   );
 }
