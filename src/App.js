@@ -9,6 +9,8 @@ import Steak from './components/pages/Steak';
 import Burger from './components/pages/Burger';
 import Finished from './components/pages/Finished';
 import TimersPage from './components/pages/TimersPage';
+import EditUser from './components/pages/EditUser';
+import ViewUser from './components/pages/Profile';
 
 
 export default function App() {
@@ -26,6 +28,8 @@ export default function App() {
           <Route path="/burger" element={<Burger />} /> 
           <Route path="/timerspage" element={<TimersPage />} /> 
           <Route path="/finished" element={<Finished />} /> 
+          <Route path="/edituser" element={<EditUser />} />
+          <Route path="/profile" element={<ViewUser />} />
       </Routes>
       <br />
       </BrowserRouter>
