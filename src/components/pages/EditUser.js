@@ -20,9 +20,9 @@ export default function EditUser() {
 
   const deleteUser = async (event) => {
     event.preventDefault();
-    console.log('delete');
     try {
     const loggedInUser = localStorage.getItem('loggedInUser');
+    console.log(loggedInUser);
     await axios.delete(`http://localhost:8080/deleteByEmail/${loggedInUser}`, )
     } catch (e) {
         console.error(e.message);
