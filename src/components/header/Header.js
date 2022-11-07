@@ -15,6 +15,15 @@ function Header() {
                 <div className="collapse navbar-collapse" id="navbarcollapse">
                     <ul className="navbar-nav me-auto mb-2 mb-md-0">
                     <li className="nav-items">
+                            <div className="profilefirebutton">
+                                <FireButton
+                                    type="submit"
+                                    href="/profile"
+                                    text="Profile"
+                                />
+                            </div>
+                        </li>
+                    <li className="nav-items">
                             <div className="infofirebutton">
                                 <FireButton
                                     type="submit"
@@ -41,6 +50,7 @@ function Header() {
                                 />
                             </div>
                         </li>
+                        
                         
 
                     </ul>
