@@ -116,3 +116,10 @@ h3 {
     top: 40%;
     left: 22%;
   }
+
+  #grill-header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 80px;
+  }

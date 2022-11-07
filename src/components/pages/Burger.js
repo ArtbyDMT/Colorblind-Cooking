@@ -5,7 +5,7 @@ import burger from '../logo/burgerpatty.png';
 
 export default function Burger(){
     return(
-        <div>
+        <div className="burgerfiretimer">
             <FireTimer 
                 image={burger}
             />

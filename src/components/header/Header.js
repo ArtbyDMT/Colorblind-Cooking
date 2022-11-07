@@ -18,8 +18,8 @@ function Header() {
                             <div className="profilefirebutton">
                                 <FireButton
                                     type="submit"
-                                    href="/profile"
-                                    text="Profile"
+                                    href="/edituser"
+                                    text="Edit Login"
                                 />
                             </div>
                         </li>

@@ -52,12 +52,12 @@ import FireButton from "../buttons/FireButton";
               return (
                 
                 <section>
-                  
-                  <div className="grill">
-                    <h1>Your Grilling, Your Way!</h1>
+
+<div id="grill-header">                    
+<h1>Your Grilling, Your Way!</h1>
                     
-                    <div className="firetimer">
                       <label>{displayTime}</label>
+                     
                       <FireButton 
                       href="/timerspage"
                       className={playPauseClass} 
@@ -65,7 +65,8 @@ import FireButton from "../buttons/FireButton";
                       text="▶"/>
                      
                     
-                    </div>
+</div>                  
+                  <div className="grill">
                     <Meat type="Rare" title="rare: Cool, red center" instructions="3 minutes" seconds="180" updateTimer={this.updateTimer} image={this.props.image} />
                     <Meat type="Medium Rare" title="medium-rare: warm, red center" instructions="4 minutes" seconds="240" updateTimer={this.updateTimer} image={this.props.image} />
                     <Meat type="Medium" title="medium: warm, pink center" instructions="5 minutes" seconds="300" updateTimer={this.updateTimer} image={this.props.image} />
