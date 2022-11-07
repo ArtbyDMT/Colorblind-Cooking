@@ -69,7 +69,7 @@ const SignUp = () => {
                                         <FireButton
                                             onClick={signUpSubmitHandler}
                                             type="submit"
-                                            href="/steakorburger"
+                                            href="/"
                                             text="Sign Up"
                                         />
                                     </div>
