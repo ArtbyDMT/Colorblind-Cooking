@@ -56,15 +56,15 @@ import FireButton from "../buttons/FireButton";
 <div id="grill-header">                    
 <h1>Your Grilling, Your Way!</h1>
                     
-                      <label>{displayTime}</label>
                      
+                     <div id="fire-button">
                       <FireButton 
-                      href="/timerspage"
+                      href="timerspage"
                       className={playPauseClass} 
                       onClick={this.handleRunClick}
                       text="▶"/>
-                     
-                    
+                      <label className="actualtimer">{displayTime}</label>
+                      </div>
 </div>                  
                   <div className="grill">
                     <Meat type="Rare" title="rare: Cool, red center" instructions="3 minutes" seconds="180" updateTimer={this.updateTimer} image={this.props.image} />
