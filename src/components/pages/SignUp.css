@@ -176,12 +176,13 @@ body {
 .valid-feedback {
     color: #2acc80;
 }
+.signupfirebuttonform{
+    display: flex;
+    justify-content: center;
 
-.signupfirebuttonform {
-    margin-top : 6px;
-    margin-left: 288px;
+    padding-top:8px;
+
 }
-
 .formpage{
     margin-top: 35px;
 }
