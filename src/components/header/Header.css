@@ -44,26 +44,13 @@
     }
 }
 
-.signupfirebuttonnav{
-    margin-left:100px;
-}
 
-.infofirebutton{
-    margin-left:120px;
-}
 
 .d-flexx{
-    margin-right: 125px;
     display: flex;
 }
 
-.timersfirebutton{
-    margin-left: 120px;
-}
 
-.steakorburgernavfirebutton{
-    margin-left: 120px;
-}
 
 header {position: fixed;
     top: 0;
@@ -74,6 +61,3 @@ header {position: fixed;
     margin-right: 20px;
 }
 
-.profilefirebutton{
-    margin-left: 120px;
-}
