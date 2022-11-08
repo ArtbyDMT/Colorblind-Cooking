@@ -189,6 +189,5 @@ body {
 .editbuttons{
     display: flex;
     justify-content: space-evenly;
-    margin-left:115px;
     padding-bottom: 5px;
 }
