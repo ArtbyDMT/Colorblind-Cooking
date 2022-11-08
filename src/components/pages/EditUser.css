@@ -185,3 +185,10 @@ body {
 .formpage{
     margin-top: 35px;
 }
+
+.editbuttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left:115px;
+    padding-bottom: 5px;
+}

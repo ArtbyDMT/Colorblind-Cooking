@@ -2,6 +2,7 @@
     width: 50%;
     height: 50%;
     justify-content: center;
+    margin-top: 50px;
     
 }
 
@@ -18,11 +19,12 @@ justify-content: center;
 }
 
 
-.infobuttons{
+.factsbuttons{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    padding-left:100px;
 
-    align-items: center;
-    margin-left: 50px;
+    
 }
 

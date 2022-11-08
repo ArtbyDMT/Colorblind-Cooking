@@ -9,10 +9,7 @@ export default function Info() {
     return (
         <div className="container-aboutus">
                 <div className="img-and-ul">
-                <br />
-                <br />
-                <br />
-                <br />
+                
                 <img src={colorblindfacts} className="imagefacts" alt="colorblind"/>
 
                 <ul className="fact-list">
@@ -21,11 +18,11 @@ export default function Info() {
                     <li>Color blindness is hereditary, however, it can also be caused by eye diseases, aging or retina damage</li>
                     <li>People who suffer from red green color blindness have a difficult time determining if their meat is cooked enough. Without being able to see different shades of red, it is hard to tell.</li>
                 </ul>
-                <div className="infobuttons">
-                <div className="factsbuttons">
+                {/* <div className="infobuttons"> */}
+                
                     <h3 className="h3">Learn More!</h3>
                     <br />
-                    
+                    <div className="factsbuttons">
                     <div className="factsfirebutton">
                         <FireButton
                             type="submit"
@@ -56,6 +53,6 @@ export default function Info() {
                
                </div>
                 </div>
-                </div>
+                // </div>
     )
 }
