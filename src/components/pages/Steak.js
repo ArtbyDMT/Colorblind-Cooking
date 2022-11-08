@@ -11,7 +11,8 @@ export default function Steak() {
         />
         <h3>SET YOUR GRILL TO 450°-500°</h3>
             <h3>ALLOW TO PREHEAT FOR 10-15 MINUTES</h3>
-            <h3>WHEN TIMER FINISHED, EITHER FLIP OR TAKE OFF GRILL</h3>
+            <h3>FLIP AND START TIMER OVER</h3>
+            <h3>IF FINISHED, ENJOY YOUR FOOD!</h3>
             
             </div>
     )
