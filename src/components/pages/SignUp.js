@@ -63,8 +63,6 @@ const SignUp = () => {
                                         <label for="inputPassword4" className="form-label">Password</label>
                                         <input name="password" value={user.password} onChange={userChangeHandler} type="password" className="form-control" id="inputPassword4" />
                                     </div>
-
-                                    <br />
                                     <div className="signupfirebuttonform">
                                         <FireButton
                                             onClick={signUpSubmitHandler}
